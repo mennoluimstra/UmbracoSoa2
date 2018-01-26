@@ -1,0 +1,443 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = null;
+}
+<html lang="en">
+
+<head>
+    <title>SOA 2018</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Aclonica" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nosifer" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Emblema+One" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <script src="https://use.fontawesome.com/6e67a832c8.js"></script>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_F6CofxIZ2UpN9GjQhDxwn");
+        })();
+    </script>
+</head>
+
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#home">SOA 2018</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#home">HOME</a>
+                    </li>
+                    <li>
+                        <a href="#nieuws">NIEUWS</a>
+                    </li>
+                    <li>
+                        <a href="#bands">BANDS</a>
+                    </li>
+                    <li>
+                        <a href="#info">FESTIVAL INFO</a>
+                    </li>
+                    <li>
+                        <a href="#kaarten">KAARTEN</a>
+                    </li>
+                    <li>
+                        <a href="#contact">CONTACT</a>
+                    </li>
+                    <li>
+                        <a href="/umbraco">
+                            <i class="fa fa-sign-in" aria-hidden="true"></i>LOGIN
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <!-- <ol class="carousel-indicators showIndicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol> -->
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+
+            <div class="item active">
+                <picture>
+                    <source srcset="@Umbraco.Media(1069).UmbracoFile" media="(min-width: 800px)" />
+                    <img src="@Umbraco.Media(1060).UmbracoFile" />
+                  </picture>
+                <div id="banner">
+                    <div class="inner">
+                        <h1 class="title1">SOA</h1>
+                        <p>7 Juli 2018</p>
+                        <p>SURHUIZUM, FRIESLAND</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <picture>
+                    <source srcset="@Umbraco.Media(1061).UmbracoFile" media="(min-width: 800px)" />
+                    <img src="@Umbraco.Media(1062).UmbracoFile" />
+                  </picture>
+                <div id="banner">
+                    <div class="inner">
+                        <h1 class="title2">SURHUZEM OPEN AIR</h1>
+                        <p>7 Juli 2018</p>
+                        <p>SURHUIZUM, FRIESLAND</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <picture>
+                    <source srcset="@Umbraco.Media(1063).UmbracoFile" media="(min-width: 800px)" />
+                    <img src="@Umbraco.Media(1064).UmbracoFile" />
+                  </picture>
+
+                <div id="banner">
+                    <div class="inner">
+                        <h1 class="title3">STYNSGEA OPEN AIR</h1>
+                        <p>7 Juli 2018</p>
+                        <p>SURHUIZUM, FRIESLAND</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <picture>
+                    <source srcset="@Umbraco.Media(1065).UmbracoFile" media="(min-width: 800px)" />
+                    <img src="@Umbraco.Media(1066).UmbracoFile" />
+                  </picture>
+
+                <div id="banner">
+                    <div class="inner">
+                        <h1 class="title4">SURHUZEM OPEN AIR</h1>
+                        <p>7 Juli 2018</p>
+                        <p>SURHUIZUM, FRIESLAND</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <picture>
+                    <source srcset="@Umbraco.Media(1067).UmbracoFile" media="(min-width: 800px)" />
+                    <img src="@Umbraco.Media(1068).UmbracoFile" />
+                  </picture>
+                <div id="banner">
+                    <div class="inner">
+                        <h1 class="title5">STYNSGEA OPEN AIR</h1>
+                        <p>7 Juli 2018</p>
+                        <p>SURHUIZUM, FRIESLAND</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+
+    <!-- Container NIEUWS -->
+    <div id="nieuws" class="container text-center">
+        <h3>NIEUWS</h3>
+        <p>
+            <em>Episode IV, A NEW HOPE</em>
+        </p>
+        <p>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against
+            the evil Galactic Empire. During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate
+            weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet. Pursued by the
+            Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can
+            save her people and restore freedom to the galaxy….</p>
+
+            <ul class="list-group">
+                <li class="list-group-item"><span class="label label-danger">02/02/2018</span></span> Eerste band bevestigd.</li> 
+                <li class="list-group-item"><span class="label label-danger">01/02/2018</span></span> De vergunning is binnen.</li> 
+                <li class="list-group-item"><span class="label label-danger">20/01/2018</span></span> Nieuwe site in de lucht!</li> 
+              </ul>
+
+    </div>
+
+    <!-- Container BANDS -->
+    <div id="bands" class="bg-1">
+        <div class="container">
+            <h3 class="text-center">BANDS</h3>
+            <p class="text-center">De volgende
+                <strong>bands</strong> zijn bevestigd!</p>
+
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <div class="thumbnail">
+                        <img src="@Umbraco.Media(1057).UmbracoFile" alt="up the irons">
+                        <p>
+                            <strong>Up The Irons</strong>
+                        </p>
+                        <p>Up The Irons is the ultimate Iron Maiden Tribute band. Unlike your regular coverband, we put on a
+                            spectacular, high-energy show complete with stage props, effects and on stage "Eddie" monsters
+                            that simulate a perfect Iron Maiden show. Combine that with note for note accuracy and musicianship
+                            and the "win-win" combination of 5 wild Iron Maiden freaks playing the original "Iron Maiden"
+                            hits and you have an unbeatable formula that guarantees a night to remember.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="thumbnail">
+                        <img src="@Umbraco.Media(1059).UmbracoFile" alt="MOTÖRBLAST">
+                        <p>
+                            <strong>MOTÖRBLAST</strong>
+                        </p>
+                        <p>MOTÖRBLAST is one of the most successful and most original Motörhead - imitations. Who knows Motörhead,
+                            knows what he has to expect ...... '... And do not forget the joker! ...' Supported were internationally
+                            successful acts such as, JBO, Pro Pain, Motorjesus, Tobias Regner, Zeltinger, incandescence and
+                            many more. Their shows took the band to Switzerland, Poland, Belgium with such well-known clubs
+                            like Collos-Saal in Aschaffenburg.</p>
+                        <br/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="thumbnail">
+                        <img src="@Umbraco.Media(1058).UmbracoFile" alt="FEUERENGEL">
+                        <p>
+                            <strong>FEUERENGEL</strong>
+                        </p>
+                        <p>Als je door RAMMSTEIN zelf uitgenodigd wordt om op hun feestje te spelen dan wordt je serieus genomen…
+                            Dat overkwam de #1 RAMMSTEIN tribute FEUERENGEL t.g.v. de uitreiking van een dubbel platina en
+                            gouden plaat voor de albums ‘Sehnsucht’ en ‘Herzeleid’. Vrijwel iedereen die ooit een RAMMSTEIN
+                            concert bezocht, kent het unieke karakter ervan. Een band die zijn eigen weg gaat. Op grond van
+                            het RAMMSTEIN concept trachtten diverse Duitse bands de weg naar roem en fame te bereiken maar
+                            wat overblijft waren de pioniers uit Berlijn. En terecht!</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="thumbnail">
+                        <img src="@Umbraco.Media(1056).UmbracoFile" alt="Rod Steward">
+                        <p>
+                            <strong>Pete McCall</strong>
+                        </p>
+                        <p>Some say that imitation is the sincerest form of flattery. In Pete McCall’s case that is certainly
+                            true. Pete has been a massive Rod Stewart fan for longer than he cares to remember. He has attended
+                            numerous live shows by the great man from Leicester to Las Vegas. He is aware of the special
+                            atmosphere created albeit in an intimate venue of a few hundred people or a giant football stadium
+                            with an audience of thousands.Pete’s aim is to capture the spirit of the Rod Stewart live show
+                            time and time again.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container FESTIVAL INFO -->
+    <div id="info" class="container text-center">
+        <h3>FESTIVAL INFO</h3>
+        <p>
+            <em>Episode IV, A NEW HOPE</em>
+        </p>
+        <p>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against
+            the evil Galactic Empire. During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate
+            weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet. Pursued by the
+            Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can
+            save her people and restore freedom to the galaxy….</p>
+
+            <!-- <div id="googleMap"></div> -->
+            <h3>Hoe lang moet ik nog wachten?</h3>
+            <span id="demo"></span>
+            <br/>
+            <br/>
+            <h3>Waar is het?</h3>
+            <p>It Langfal x<br/>
+            Surhuizum, Friesland</p>
+    </div>
+
+    <div id="googleMap" style="width:100%;height:400px"></div>
+
+    <!-- Container KAARTEN -->
+    <div id="kaarten" class="bg-1">
+        <div class="container text-center">
+            <h3>KAARTEN</h3>
+            
+            <script
+            src="https://www.universe.com/embed2.js"
+            data-widget-type="universe-ticket"
+            data-target-type="Listing"
+            data-target-id="test-festival-tickets-siegerswoude-CRLDHM"
+            data-state="buttonColor=#e53a3a&buttonText=Get Tickets" >
+          </script>
+
+
+        </div>
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div id="contact" class="container">
+        <h3 class="text-center">Contact</h3>
+        <p class="text-center">
+            <em>Iets te melden?</em>
+        </p>
+
+        <div class="row">
+            <div class="col-md-4">
+                <p>info</p>
+                <p>
+                    <span class="glyphicon glyphicon-map-marker"></span>Surhuizum, Friesland</p>
+                <p>
+                    <span class="glyphicon glyphicon-phone"></span>+31 612345678</p>
+                <p>
+                    <span class="glyphicon glyphicon-envelope"></span>soa-festival@outlook.com</p>
+                <p>
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <span>Facebook</span>
+                </p>
+                <p>
+                    <i class="fa fa-twitter" aria-hidden="true"></i>Twitter</p>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                    </div>
+                </div>
+                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+                <br>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <button class="btn pull-right" type="submit">Send</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <a class="up-arrow" href="#home"  title="NAAR BOVEN">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <br>
+        <br>
+        <p>Website made by Menno Luimstra
+            <!-- <a href="https://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a> -->
+        </p>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+
+            // Close navbar on click
+            $('.navbar-collapse a').click(function () {
+                $(".navbar-collapse").collapse('hide');
+            });
+            // Initialize Tooltip
+            $('[data-toggle="tooltip"]').tooltip();
+
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        })
+
+        function myMap() {
+            var myLatlng = new google.maps.LatLng(53.197831995639056,6.170625689145481);
+            var mapOptions = {
+            zoom: 14,
+            center: myLatlng
+            }
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                title:"SOA 2018"
+            });
+
+            marker.setMap(map);
+        }
+
+        var countDownDate = new Date("Jul 7, 2018 20:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+        // Get todays date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now an the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="demo"
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+        // If the count down is finished, write some text 
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+        }, 1000);
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMFz8MbY-ZzUXf8kVv2WzZupXX-Z45Bek&callback=myMap"></script>
+    <script src="scripts/index.js"></script>
+
+</body>
+
+</html>
